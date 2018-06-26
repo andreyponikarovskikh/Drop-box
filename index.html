@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q-Digital: Drop-Box</title>
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <div class="dropZone" id="dropZone">
+      <label class="dropZone__label" for="fileElem">
+        <h3>Drop files anywhere to upload</h3>
+        <p>or</p>
+        <input class="dropZone__fileSelect" type="file" id="fileElem" multiple accept="image/*"   onchange="handleFiles(this.files)">
+        <a href="#" id="fileSelect">Select files</a>
+        <div id="progress_bar">
+          <div class="percent">0%</div>
+        </div>
+      </label>
+
+      
+    </div>
+    
+    <div class="filesGallery" id="fileList">
+      <ul id="ul">
+      </ul>
+    </div>
+
+
+  <script src="js/script.js"></script>
+  </body>
+</html>
