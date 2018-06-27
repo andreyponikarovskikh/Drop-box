@@ -112,6 +112,13 @@ function updateProgress(evt) {
     }
   }
 
+//---------------make sortable list ------------
 
+$(document).ready(function() { 
+  $(".sortable").sortable({
+    opacity: 0.6,
+  })
+
+});  
 
 
