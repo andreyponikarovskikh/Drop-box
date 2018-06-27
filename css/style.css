@@ -9,7 +9,7 @@ body {
   line-height: 24px;
   font-weight: 700;
   color: #000000;
-  text-transform: uppercase;
+  /*text-transform: uppercase;*/
   text-align: center;
 
   background-image: url("../img/ep_naturalwhite.png");
@@ -39,6 +39,14 @@ p{
 	height: 100%;
 }
 
+.dropZone__button{
+	color: #000000;
+	font-size: 26px;
+	font-weight: 700;
+	margin-bottom: 20px;
+	padding: 5px 10px;
+	border: 1px solid blue;
+}
 
 .dropZone__fileSelect{
 	position: absolute;
@@ -81,11 +89,11 @@ p{
 
 }
 
-.percent{
+.progressBar__percent{
 	background-color: #99ccff;
   height: auto;
   width: 0;
-  opacity: 0;
+  //opacity: 0;
 }
 
 .loading {
