@@ -93,9 +93,16 @@ p{
 	background-color: #99ccff;
   height: auto;
   width: 0;
-  //opacity: 0;
+ 	opacity: 0;
 }
 
 .loading {
   opacity: 1.0;
+  background-color: #99ccff;
+  height: auto;
+  width: 0;
  }
+
+.not_loading{
+	opacity: 0;
+}

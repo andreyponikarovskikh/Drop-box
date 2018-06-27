@@ -19,13 +19,8 @@ function handleFiles(files) {
     reader.onloadstart = function(e) {
       document.getElementById('progress_bar').className = 'loading';
     };
-    reader.onloadend = function(e) {
-      progress.style.width = '100%';
-      progress.textContent = '100%';
-      setTimeout ( function(){
-      document.getElementById('progress_bar').className = 'not_loading';  
-    },500);
-      
+    reader.onloadend = function() {
+        img.src = reader.result;
     };
 
     var list = document.querySelector("ul");
@@ -38,6 +33,7 @@ function handleFiles(files) {
       
       var img = document.createElement("img");
       img.src = window.URL.createObjectURL(files[i]);
+      img.src = reader.readAsDataURL(files[i]);
       img.height = 60;
 
       img.onload = function() {
@@ -58,16 +54,6 @@ function updateProgress(evt) {
         progress.style.width = percentLoaded + '%';
         progress.textContent = percentLoaded + '%';
       }
-    } else {
-      setTimeout ( function(){
-        progress.style.opacity = '1';
-        },300);
-      // progress.style.opacity = '1';
-      progress.style.width = '100%';
-      progress.textContent = '100%';
-      setTimeout ( function(){
-        progress.style.opacity = '0';
-    },700);
     }
   }
 
@@ -78,4 +64,5 @@ $(document).ready(function() {
     opacity: 0.6,
   });
 });  
+
 
